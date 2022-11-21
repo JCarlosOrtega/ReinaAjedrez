@@ -24,7 +24,7 @@ public class Posicion {
 	public int getFila() {
 		return fila;
 	}
-	public void setFila(int fila) {
+	private void setFila(int fila) {
 		if (fila < 1 || fila > 8)
 			throw new IllegalArgumentException("ERROR: La fila introducida no es correcta");
 		else
@@ -33,7 +33,7 @@ public class Posicion {
 	public char getColumna() {
 		return columna;
 	}
-	public void setColumna(char columna) {
+	private void setColumna(char columna) {
 		if (columna != 'a'|| columna != 'b' || columna != 'c' || columna != 'd' || columna != 'e' || columna != 'f' || columna != 'g' || columna != 'h')
 			throw new IllegalArgumentException("ERROR: La columna introducida no es correcta");
 		else
