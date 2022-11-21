@@ -58,6 +58,11 @@ public class Reina {
 		
 		this.posicion = posicion;
 	}
+
+	@Override
+	public String toString() {
+		return "La Reina es de color: " + color + " y, su posición es: " + posicion;
+	}
 	
 	
 	
