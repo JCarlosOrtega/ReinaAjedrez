@@ -9,12 +9,18 @@ public class Reina {
 	public Reina () {
 		
 		setColor(Color.BLANCO);
-		setPosicion(posicion);
+		this.posicion=new Posicion(1, 'd');
 		
 	}
 	
-	public Reina (Color color, Posicion posicion) {
+	public Reina (Color color) {
 		
+		setColor(color);
+		if (color == color.BLANCO) {
+			setPosicion(new Posicion(1, 'd'));
+		} else {
+			setPosicion(new Posicion(8, 'd'));
+		}
 	}
 	
 	
