@@ -5,7 +5,12 @@ public class Posicion {
 	private int fila;
 	private char columna;
 	
-	
+	public Posicion (int fila, char columna) throws IllegalArgumentException {
+		
+		setFila(fila);
+		setColumna(columna);
+		
+	}
 	
 	
 	
