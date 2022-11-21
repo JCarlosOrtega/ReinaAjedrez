@@ -24,7 +24,15 @@ public class Reina {
 	}
 	
 	
-	
+	public void Mover (Direccion direccion, int pasos) {
+		if (direccion == null)
+			throw new NullPointerException("Error: La dirección no puede ser nula.");
+		else if (pasos < 1 || pasos > 7)
+			throw new IllegalArgumentException("Error: Los pasos deben estar entre 1 y 7.");
+		else
+		this.Mover(direccion, pasos);
+		
+	}
 	
 	
 	
@@ -35,13 +43,19 @@ public class Reina {
 		return color;
 	}
 	private void setColor(Color color) {
-		
+		if (color == null)
+			throw new NullPointerException("Error: El color no puede ser nulo.");
+		if (color != color.BLANCO || color != color.NEGRO)
+			throw new IllegalArgumentException("Error: El color de la Reina solo puede ser NEGRO O BLANCO");
 		this.color = color;
 	}
 	public Posicion getPosicion() {
 		return posicion;
 	}
 	private void setPosicion(Posicion posicion) {
+		if (posicion == null)
+			throw new NullPointerException("Error: La posicion no puede ser nula.");
+		
 		this.posicion = posicion;
 	}
 	
