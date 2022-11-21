@@ -6,9 +6,16 @@ public class Reina {
 	private Posicion posicion;
 	
 	
+	public Reina () {
+		
+		setColor(Color.BLANCO);
+		setPosicion(posicion);
+		
+	}
 	
-	
-	
+	public Reina (Color color, Posicion posicion) {
+		
+	}
 	
 	
 	
@@ -22,6 +29,7 @@ public class Reina {
 		return color;
 	}
 	private void setColor(Color color) {
+		
 		this.color = color;
 	}
 	public Posicion getPosicion() {
