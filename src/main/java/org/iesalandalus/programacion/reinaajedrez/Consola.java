@@ -4,7 +4,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
 	
-	private int opcionElegida=0;
+	private int opcionElegida=0, numColorElegido=0;
 	
 	
 	private Consola () {
@@ -30,4 +30,21 @@ public class Consola {
 		
 		return opcionElegida;
 	}
+	
+	public Color elegirColor () {
+		do {
+		System.out.println("¿Qué color quieres elegir?");
+		System.out.println("1. BLANCO.");
+		System.out.println("2. NEGRO.");
+		numColorElegido=Entrada.entero();
+		} while (numColorElegido > 2 || numColorElegido < 1);
+		
+		
+		if (numColorElegido == 1)
+			return Color.BLANCO;
+		else
+			return Color.NEGRO;
+	}
+	
+	
 }
