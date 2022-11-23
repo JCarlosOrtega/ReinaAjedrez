@@ -4,7 +4,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class MainApp {
 	
-	Reina reina=new Reina();
+	Reina reina;
 	
 	public static void main(String[] args) {
 		
@@ -22,7 +22,10 @@ public class MainApp {
 		return reina;
 	}
 	
-	
+	private Reina crearReinaColor (Color color) {
+		reina=new Reina(color);
+		return reina;
+	}
 	
 	
 }
