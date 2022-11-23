@@ -16,8 +16,11 @@ public class MainApp {
 		
 		return opcion;
 	}
-	
-	
+
+	private Reina crearReinaDefecto() {
+		reina=new Reina();
+		return reina;
+	}
 	
 	
 	
