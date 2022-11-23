@@ -4,7 +4,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
 	
-	private int opcionElegida=0, numColorElegido=0, direccionElegida=0;
+	private int opcionElegida=0, numColorElegido=0, direccionElegida=0, pasosAMover=0;
 	
 	
 	private Consola () {
@@ -98,5 +98,18 @@ public class Consola {
 		}
 		return null;
 	}
+	
+	
+	public int elegirPasos () {
+		
+		System.out.println("¿Cuántos pasos quieres mover a la Reina?");
+		pasosAMover=Entrada.entero();
+		
+		return pasosAMover;
+		
+	}
+	
+	
+	
 	
 }
