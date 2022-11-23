@@ -4,7 +4,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
 	
-	private int opcionElegida=0, numColorElegido=0;
+	private int opcionElegida=0, numColorElegido=0, direccionElegida=0;
 	
 	
 	private Consola () {
@@ -48,7 +48,7 @@ public class Consola {
 	
 	public void mostrarMenuDirecciones () {
 		System.out.println("¿En que dirección quieres mover a la Reina?");
-		System.out.println("Elige entre las opciones 1-8.");
+		
 		System.out.println("1. NORTE.");
 		System.out.println("2. NORESTE.");
 		System.out.println("3. ESTE.");
@@ -58,6 +58,45 @@ public class Consola {
 		System.out.println("7. OESTE.");
 		System.out.println("8. NOROESTE.");
 		
+	}
+	
+	public Direccion elegirDireccion () {
+		mostrarMenuDirecciones();
+		do {
+		System.out.println("Elige entre las opciones 1-8.");
+		direccionElegida=Entrada.entero();
+		} while (direccionElegida < 1 || direccionElegida > 8);
+		
+		switch (direccionElegida) {
+			case 1:
+					return Direccion.NORTE;
+					
+			case 2:
+					return Direccion.NORESTE;
+					
+			case 3:
+					return Direccion.ESTE;
+					
+			case 4:
+					return Direccion.SURESTE;
+					
+			case 5:
+					return Direccion.SUR;
+					
+			case 6:
+					return Direccion.SUROESTE;
+					
+			case 7:
+					return Direccion.OESTE;
+					
+			case 8:
+					return Direccion.NOROESTE;
+					
+			default:
+				break;
+					
+		}
+		return null;
 	}
 	
 }
