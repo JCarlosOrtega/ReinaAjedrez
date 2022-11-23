@@ -4,14 +4,14 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
 	
-	private int opcionElegida=0, numColorElegido=0, direccionElegida=0, pasosAMover=0;
+	private static int opcionElegida=0, numColorElegido=0, direccionElegida=0, pasosAMover=0;
 	
 	
 	private Consola () {
 		
 	}
 	
-	public void mostrarMenu () {
+	public static void mostrarMenu () {
 		
 
 		System.out.println("1. Crear una Reina por defecto.");
@@ -20,8 +20,8 @@ public class Consola {
 		System.out.println("4. Salir.");
 	}
 
-	public int elegirOpcionMenu () {
-		mostrarMenu();
+	public static int elegirOpcionMenu () {
+		
 		System.out.println("¿Qué acción quieres realizar?");
 		do {
 		System.out.println("Elige entre las opciones 1 - 4");
@@ -31,7 +31,7 @@ public class Consola {
 		return opcionElegida;
 	}
 	
-	public Color elegirColor () {
+	public static Color elegirColor () {
 		do {
 		System.out.println("¿Qué color quieres elegir?");
 		System.out.println("1. BLANCO.");
@@ -46,7 +46,7 @@ public class Consola {
 			return Color.NEGRO;
 	}
 	
-	public void mostrarMenuDirecciones () {
+	public static void mostrarMenuDirecciones () {
 		System.out.println("¿En que dirección quieres mover a la Reina?");
 		
 		System.out.println("1. NORTE.");
@@ -60,7 +60,7 @@ public class Consola {
 		
 	}
 	
-	public Direccion elegirDireccion () {
+	public static Direccion elegirDireccion () {
 		mostrarMenuDirecciones();
 		do {
 		System.out.println("Elige entre las opciones 1-8.");
@@ -100,7 +100,7 @@ public class Consola {
 	}
 	
 	
-	public int elegirPasos () {
+	public static int elegirPasos () {
 		
 		System.out.println("¿Cuántos pasos quieres mover a la Reina?");
 		pasosAMover=Entrada.entero();

@@ -16,7 +16,8 @@ public class Reina {
 	public Reina (Color color) {
 		
 		setColor(color);
-		if (color == color.BLANCO) {
+		
+		if (color.equals(Color.BLANCO)) {
 			setPosicion(new Posicion(1, 'd'));
 		} else {
 			setPosicion(new Posicion(8, 'd'));
@@ -32,6 +33,10 @@ public class Reina {
 		else
 		this.Mover(direccion, pasos);
 		
+		
+		
+		
+		
 	}
 	
 	
@@ -45,7 +50,7 @@ public class Reina {
 	private void setColor(Color color) {
 		if (color == null)
 			throw new NullPointerException("Error: El color no puede ser nulo.");
-		if (color != color.BLANCO || color != color.NEGRO)
+		if (!color.equals(Color.BLANCO) || !color.equals(Color.NEGRO))
 			throw new IllegalArgumentException("Error: El color de la Reina solo puede ser NEGRO O BLANCO");
 		this.color = color;
 	}
@@ -61,7 +66,7 @@ public class Reina {
 
 	@Override
 	public String toString() {
-		return "La Reina es de color: " + color + " y, su posición es: " + posicion;
+		return "La Reina es de color: " + color.toString() + " y, su posición es: " + posicion.toString();
 	}
 	
 	

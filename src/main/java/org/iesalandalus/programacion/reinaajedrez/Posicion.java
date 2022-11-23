@@ -64,7 +64,7 @@ public class Posicion {
 
 	@Override
 	public String toString() {
-		return "La Reina está en la posición [Fila=" + fila + ", columna=" + columna + "]";
+		return "La Reina está en la fila= " + fila + ", y columna=" + columna;
 	}
 	
 	
