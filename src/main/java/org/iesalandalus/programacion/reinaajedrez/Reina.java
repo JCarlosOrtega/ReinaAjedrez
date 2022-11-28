@@ -26,6 +26,7 @@ public class Reina {
 	
 	
 	public void Mover (Direccion direccion, int pasos) {
+		
 		if (direccion == null)
 			throw new NullPointerException("Error: La dirección no puede ser nula.");
 		else if (pasos < 1 || pasos > 7)
@@ -50,7 +51,7 @@ public class Reina {
 	private void setColor(Color color) {
 		if (color == null)
 			throw new NullPointerException("Error: El color no puede ser nulo.");
-		if (!color.equals(Color.BLANCO) || !color.equals(Color.NEGRO))
+		if (!color.equals(Color.BLANCO) && !color.equals(Color.NEGRO))
 			throw new IllegalArgumentException("Error: El color de la Reina solo puede ser NEGRO O BLANCO");
 		this.color = color;
 	}
@@ -66,7 +67,7 @@ public class Reina {
 
 	@Override
 	public String toString() {
-		return "La Reina es de color: " + color.toString() + " y, su posición es: " + posicion.toString();
+		return "La Reina es de color: " + color + " y, su posición es: " + posicion.toString();
 	}
 	
 	

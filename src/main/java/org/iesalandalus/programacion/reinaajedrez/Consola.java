@@ -93,10 +93,11 @@ public class Consola {
 					return Direccion.NOROESTE;
 					
 			default:
-				break;
+				return null;
+				
 					
 		}
-		return null;
+		
 	}
 	
 	

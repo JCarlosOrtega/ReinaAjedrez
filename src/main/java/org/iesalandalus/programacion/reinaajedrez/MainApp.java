@@ -21,13 +21,15 @@ public class MainApp {
 		switch (opcion) {
 		case 1:
 				crearReinaDefecto();
+				mostrarReina();
 			break;
 		case 2:
-				crearReinaColor(Consola.elegirColor());
-				
+				crearReinaColor(Consola.elegirColor());	
+				mostrarReina();
 			break;
 		case 3:
 				
+				mostrarReina();
 			break;
 		case 4:
 				System.out.println("Gracias por usar la aplicación, hasta la vista.");
@@ -51,11 +53,15 @@ public class MainApp {
 	private static Reina crearReinaColor (Color color) {
 		reina=new Reina(color);
 		System.out.println("Hemos creado una Reina por defecto de color "+reina.getColor());
-		reina.toString();
+		System.out.println(reina.toString());
 		return reina;
 	}
 	
-	
+	private static void mostrarReina () {
+		System.out.println(reina.toString());
+		Consola.mostrarMenu();
+		ejecutarOpcion(Consola.elegirOpcionMenu());
+	}
 	
 	
 }
