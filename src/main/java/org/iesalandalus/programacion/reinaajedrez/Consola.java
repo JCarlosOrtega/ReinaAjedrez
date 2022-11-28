@@ -1,7 +1,8 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
 import org.iesalandalus.programacion.utilidades.Entrada;
-
+	//Ésta clase nos es útil para tener a mano las opciones y menús
+	//que se mostrarán por pantalla
 public class Consola {
 	
 	private static int opcionElegida=0, numColorElegido=0, direccionElegida=0, pasosAMover=0;
@@ -14,7 +15,7 @@ public class Consola {
 	public static void mostrarMenu () {
 		
 
-		System.out.println("1. Crear una Reina por defecto.");
+		System.out.println("\n1. Crear una Reina por defecto.");
 		System.out.println("2. Crear una Reina eligiendo color.");
 		System.out.println("3. Mover.");
 		System.out.println("4. Salir.");
@@ -22,7 +23,7 @@ public class Consola {
 
 	public static int elegirOpcionMenu () {
 		
-		System.out.println("¿Qué acción quieres realizar?");
+		System.out.println("\n¿Qué acción quieres realizar?");
 		do {
 		System.out.println("Elige entre las opciones 1 - 4");
 		opcionElegida=Entrada.entero();
@@ -33,7 +34,7 @@ public class Consola {
 	
 	public static Color elegirColor () {
 		do {
-		System.out.println("¿Qué color quieres elegir?");
+		System.out.println("\n¿Qué color quieres elegir?");
 		System.out.println("1. BLANCO.");
 		System.out.println("2. NEGRO.");
 		numColorElegido=Entrada.entero();
@@ -47,9 +48,9 @@ public class Consola {
 	}
 	
 	public static void mostrarMenuDirecciones () {
-		System.out.println("¿En que dirección quieres mover a la Reina?");
+		System.out.println("\n¿En que dirección quieres mover a la Reina?");
 		
-		System.out.println("1. NORTE.");
+		System.out.println("\n1. NORTE.");
 		System.out.println("2. NORESTE.");
 		System.out.println("3. ESTE.");
 		System.out.println("4. SURESTE.");

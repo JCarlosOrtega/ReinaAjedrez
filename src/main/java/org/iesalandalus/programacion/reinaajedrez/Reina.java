@@ -5,7 +5,7 @@ public class Reina {
 	private Color color;
 	private Posicion posicion;
 	
-	
+	//constructores de Reina
 	public Reina () {
 		
 		setColor(Color.BLANCO);
@@ -24,7 +24,8 @@ public class Reina {
 		}
 	}
 	
-	
+	//este método me ha resultado mas abstracto y no lo he podido comprender del todo
+	//la manera de poder hacerlo funcionar
 	public void Mover (Direccion direccion, int pasos) {
 		
 		if (direccion == null)
@@ -43,7 +44,7 @@ public class Reina {
 	
 	
 	
-	
+	//Setters and getters de Reina con sus validaciones
 	
 	public Color getColor() {
 		return color;
@@ -65,6 +66,9 @@ public class Reina {
 		this.posicion = posicion;
 	}
 
+	
+	//método toString
+	
 	@Override
 	public String toString() {
 		return "La Reina es de color: " + color + " y, su posición es: " + posicion.toString();

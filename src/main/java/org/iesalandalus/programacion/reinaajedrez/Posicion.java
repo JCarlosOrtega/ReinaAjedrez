@@ -7,6 +7,9 @@ public class Posicion {
 	private int fila;
 	private char columna;
 	
+	
+	//Constructores de posición
+	
 	public Posicion () {
 		setFila(1);
 		setColumna('d');
@@ -25,6 +28,7 @@ public class Posicion {
 	}
 	
 	
+	//Setters and getters de Posicion con validaciones
 	
 	public int getFila() {
 		return fila;
@@ -45,6 +49,9 @@ public class Posicion {
 			this.columna = columna;
 	}
 
+	
+	//hashCode, equals y toString de posicion
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(columna, fila);
@@ -64,7 +71,7 @@ public class Posicion {
 
 	@Override
 	public String toString() {
-		return "La Reina está en la fila= " + fila + ", y columna=" + columna;
+		return "la fila: " + fila + ", y columna: " + columna;
 	}
 	
 	
